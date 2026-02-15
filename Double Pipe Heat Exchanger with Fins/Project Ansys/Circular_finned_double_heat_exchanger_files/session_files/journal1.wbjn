@@ -1,0 +1,9 @@
+# encoding: utf-8
+# 2024 R1
+SetScriptVersion(Version="24.1.144")
+template1 = GetTemplate(TemplateName="Fluid Flow")
+system1 = template1.CreateSystem()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath="C:/Users/mdsib/Downloads/circular_finned_double_heat_exchanger_setup.stp")
+geometry1.Edit(IsSpaceClaimGeometry=True)
+Save(Overwrite=True)
